@@ -1,2 +1,15 @@
 # MI_CC_UGR
+
 Repositorio para almacenar las prácticas de CC del curso 22-23 del MUII en la UGR.
+
+- ⚙️ [Hito 0] Para visualizar la configuración de git y GitHub pulsa [aquí](doc/0_config_repo.md).
+- 📔 [Hito 0] Para visualizar la descripción del proyecto pulsa [aquí](doc/0_descripcion_proyecto.md).
+- 🪪 [Hito 0] La licencia que se va a usar en este proyecto es la GNU que puede leerse [aquí](LICENSE)
+
+## Cineópolis
+
+<img src="./doc/img/logo.png" alt="drawing" width="200"/>
+
+En Cineópolis es tu aplicación para consultar la cartelera cuando quieras ver una película.
+
+<-- En construcción -->
