@@ -1,0 +1,62 @@
+<%= form_with(model: movie) do |form| %>
+  <% if movie.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
+
+      <ul>
+        <% movie.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :synopsis, style: "display: block" %>
+    <%= form.text_area :synopsis %>
+  </div>
+
+  <div>
+    <%= form.label :launch_date, style: "display: block" %>
+    <%= form.datetime_field :launch_date %>
+  </div>
+
+  <div>
+    <%= form.label :age_classification, style: "display: block" %>
+    <%= form.text_field :age_classification %>
+  </div>
+
+  <div>
+    <%= form.label :length, style: "display: block" %>
+    <%= form.text_field :length %>
+  </div>
+
+  <div>
+    <%= form.label :genre, style: "display: block" %>
+    <%= form.text_field :genre %>
+  </div>
+
+  <div>
+    <%= form.label :director, style: "display: block" %>
+    <%= form.text_field :director %>
+  </div>
+
+  <div>
+    <%= form.label :poster, style: "display: block" %>
+    <%= form.text_field :poster %>
+  </div>
+
+  <div>
+    <%= form.label :rating_avg, style: "display: block" %>
+    <%= form.text_field :rating_avg %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
