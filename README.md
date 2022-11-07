@@ -16,4 +16,12 @@ Repositorio para almacenar las prácticas de CC del curso 22-23 del MUII en la U
 
 En Cineópolis es tu aplicación para consultar la cartelera cuando quieras ver una película.
 
-<-- En construcción -->
+## Desarrollo y evolución
+
+### Milestones
+
+Para conocer los hitos del desarrollo del proyecto pulse [aquí](https://github.com/VictorRubia/MI_CC_UGR/milestones).
+
+### Issues e Historias de Usuario
+
+Para conocer las historias de usuario e issues del proyecto pulse [aquí](https://github.com/VictorRubia/MI_CC_UGR/issues).
