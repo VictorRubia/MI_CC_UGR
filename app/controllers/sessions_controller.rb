@@ -1,8 +1,13 @@
 class SessionsController < ApplicationController
   before_action :set_session, only: %i[ show update destroy ]
 
-  def get_cartelera
-    today
+  # GET /sessions.json
+  def index
+    @sessions = Session.all
+  end
+
+  # GET /sessions/1.json
+  def show
   end
 
   # POST /sessions.json
