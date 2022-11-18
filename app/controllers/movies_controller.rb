@@ -23,6 +23,15 @@ class MoviesController < ApplicationController
     end
   end
 
+  # PATCH/PUT /sessions/1.json
+  def update
+    if @movie.update(@movie_params)
+      render :show, status: :ok, location: @movie
+    else
+      render json: @movie.errors, status: :unprocessable_entity
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_movie
