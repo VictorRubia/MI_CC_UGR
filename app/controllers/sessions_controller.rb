@@ -21,6 +21,15 @@ class SessionsController < ApplicationController
     end
   end
 
+  # PATCH/PUT /sessions/1.json
+  def update
+    if @session.update(session_params)
+      render :show, status: :ok, location: @session
+    else
+      render json: @session.errors, status: :unprocessable_entity
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_session
