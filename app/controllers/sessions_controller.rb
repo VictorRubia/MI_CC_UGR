@@ -41,6 +41,10 @@ class SessionsController < ApplicationController
       @session = Session.find(params[:id])
     end
 
+    def today
+      @session = Session.where(dates: Time.now.strftime("%d/%m/%Y").to_s)
+    end
+
     # Only allow a list of trusted parameters through.
     def session_params
       params.permit(:movie_id, :times, :dates)
