@@ -10,6 +10,19 @@ class MoviesController < ApplicationController
   def show
   end
 
+  # POST /movies or /movies.json
+  def create
+    @movie = Movie.new(movie_params)
+
+    respond_to do |format|
+      if @movie.save
+        format.json { render :show, status: :created, location: @movie }
+      else
+        format.json { render json: @movie.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_movie
