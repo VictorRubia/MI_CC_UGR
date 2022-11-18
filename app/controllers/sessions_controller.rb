@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   before_action :set_session, only: %i[ show update destroy ]
+  before_action :prepare_get_cartelera, only: %i[ get_cartelera ]
 
   # GET /sessions.json
   def index
@@ -8,6 +9,9 @@ class SessionsController < ApplicationController
 
   # GET /sessions/1.json
   def show
+  end
+
+  def get_cartelera
   end
 
   # POST /sessions.json
@@ -41,8 +45,14 @@ class SessionsController < ApplicationController
       @session = Session.find(params[:id])
     end
 
-    def today
-      @session = Session.where(dates: Time.now.strftime("%d/%m/%Y").to_s)
+    def prepare_get_cartelera
+      if params[:dates] == nil
+        @session = Session.where(dates: Time.now.strftime("%d/%m/%Y").to_s)
+        @movie = Movie.where(id: Session.where(dates: Time.now.strftime("%d/%m/%Y").to_s).select(:movie_id))
+      else
+        @session = Session.where(dates: params[:dates])
+        @movie = Movie.where(id: Session.where(dates: params[:dates]).select(:movie_id))
+      end
     end
 
     # Only allow a list of trusted parameters through.

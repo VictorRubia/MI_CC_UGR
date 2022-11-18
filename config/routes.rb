@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   # root "movies#index"
   resources :movies
   resources :sessions
+  get 'cartelera', to: 'sessions#get_cartelera'
 end
