@@ -58,6 +58,6 @@ class SessionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def session_params
-      params.permit(:movie_id, :times, :dates)
+      params.require(:session).permit(:movie_id, :times, :dates)
     end
 end
