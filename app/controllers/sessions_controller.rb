@@ -21,6 +21,7 @@ class SessionsController < ApplicationController
     if @session.save
       render :show, status: :created, location: @session
     else
+      puts @session.save!
       render json: @session.errors, status: :unprocessable_entity
     end
   end

@@ -25,7 +25,7 @@ class MoviesController < ApplicationController
 
   # PATCH/PUT /sessions/1.json
   def update
-    if @movie.update(@movie_params)
+    if @movie.update(movie_params)
       render :show, status: :ok, location: @movie
     else
       render json: @movie.errors, status: :unprocessable_entity
@@ -34,6 +34,7 @@ class MoviesController < ApplicationController
 
   # DELETE /sessions/1.json
   def destroy
+    Session.find_by(movie_id: @movie.id).destroy
     @movie.destroy
   end
 
