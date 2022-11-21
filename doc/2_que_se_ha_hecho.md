@@ -2,18 +2,17 @@
 
 ## Índice
 - [Hito 2: Tareas de desarrollo](#hito-2--tareas-de-desarrollo)
-    * [Índice](#-ndice)
-    * [Creación del modelo de sesiones de películas](#creaci-n-del-modelo-de-sesiones-de-pel-culas)
-    * [Desarrollo de funciones CRUD y vistas para la gestión de películas](#desarrollo-de-funciones-crud-y-vistas-para-la-gesti-n-de-pel-culas)
-    * [Desarrollo de funciones CRUD y vistas para la gestión de sesiones de películas](#desarrollo-de-funciones-crud-y-vistas-para-la-gesti-n-de-sesiones-de-pel-culas)
-    * [Desarrollo de función y vista para obtener la cartelera](#desarrollo-de-funci-n-y-vista-para-obtener-la-cartelera)
+    * [Creación del modelo de sesiones de películas](#creación-del-modelo-de-sesiones-de-películas)
+    * [Desarrollo de funciones CRUD y vistas para la gestión de películas](#desarrollo-de-funciones-crud-y-vistas-para-la-gestión-de-películas)
+    * [Desarrollo de funciones CRUD y vistas para la gestión de sesiones de películas](#desarrollo-de-funciones-crud-y-vistas-para-la-gestión-de-sesiones-de-películas)
+    * [Desarrollo de función y vista para obtener la cartelera](#desarrollo-de-función-y-vista-para-obtener-la-cartelera)
         + [Resultados](#resultados)
-    * [Documentación de gestores de tareas existentes](#documentaci-n-de-gestores-de-tareas-existentes)
-    * [Documentación sobre marcos de trabajo para pruebas existentes](#documentaci-n-sobre-marcos-de-trabajo-para-pruebas-existentes)
-    * [Documentación sobre biblioteca de aserciones existentes](#documentaci-n-sobre-biblioteca-de-aserciones-existentes)
-    * [Test de unidad para los modelos de película y sesiones](#test-de-unidad-para-los-modelos-de-pel-cula-y-sesiones)
+    * [Documentación de gestores de tareas existentes](#documentación-de-gestores-de-tareas-existentes)
+    * [Documentación sobre marcos de trabajo para pruebas existentes](#documentación-sobre-marcos-de-trabajo-para-pruebas-existentes)
+    * [Documentación sobre biblioteca de aserciones existentes](#documentación-sobre-biblioteca-de-aserciones-existentes)
+    * [Test de unidad para los modelos de película y sesiones](#test-de-unidad-para-los-modelos-de-película-y-sesiones)
         + [Resultados de pruebas con el gestor de tareas](#resultados-de-pruebas-con-el-gestor-de-tareas)
-    * [Documentación de los End-Points de nuestra API desarrollada](#documentaci-n-de-los-end-points-de-nuestra-api-desarrollada)
+    * [Documentación de los End-Points de nuestra API desarrollada](#documentación-de-los-end-points-de-nuestra-api-desarrollada)
 
 ## Creación del modelo de sesiones de películas
 
