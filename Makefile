@@ -6,4 +6,4 @@ down:
 build:
 	docker-compose build
 test:
-	docker-compose exec web rails test
+	docker-compose exec cineopolis rake test
