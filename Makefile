@@ -4,6 +4,6 @@ up:
 down:
 	docker-compose down
 build:
-	docker-compose build
+	docker build -t cineopolis .
 test:
-	docker-compose exec cineopolis rake test
+	docker-compose run cineopolis rake test
