@@ -14,12 +14,10 @@ class MoviesController < ApplicationController
   def create
     @movie = Movie.new(movie_params)
 
-    respond_to do |format|
-      if @movie.save
-        format.json { render :show, status: :created, location: @movie }
-      else
-        format.json { render json: @movie.errors, status: :unprocessable_entity }
-      end
+    if @movie.save
+      render json: @movie, status: :created, location: @movie
+    else
+      render json: @movie.errors, status: :unprocessable_entity
     end
   end
 
