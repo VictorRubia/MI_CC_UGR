@@ -3,7 +3,7 @@ name: GitHub Container Registry
 on:
   push:
     paths:
-      - ".github/workflows/latest.yml"
+      - ".github/workflows/githubcr.yml"
       - "app/*"
       - "test/*"
       - "config/*"
