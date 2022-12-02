@@ -1,5 +1,6 @@
 name: GitHub Container Registry
-#Se activará cuando se modifique alguna de las siguientes ramas
+
+# Se activa cuando se modifica alguna de los siguientes ficheros
 on:
   push:
     paths:
@@ -11,7 +12,7 @@ on:
       - "Makefile"
       - "docker-compose.yml"
       - "Dockerfile"
-#Variable de entorno que será nuestro repositorio
+# Variable de entorno que será nuestro repositorio
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
