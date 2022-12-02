@@ -16,7 +16,7 @@ En primer lugar utilizaremos DockerHub para alojar nuestro contenedor de pruebas
 
 Además podemos integrar una GitHub Action para que, de forma automática, se detecte cambios de código en la aplicación y construya una nueva imágen, subiéndola a DockerHub.
 
-Técnicamente es un servicio de repositorios de contenedores Docker, que en nuestro caso nos permite alojar nuestro contenedor de test para el proyecto y actualizando el código de forma automatizada mediante un Workflow. Con esto, podemos ejecutar los test y el proyecto de forma independiente de la plataforma desde la que se tenga.
+Técnicamente es un servicio de repositorios de contenedores Docker, que en nuestro caso nos permite alojar nuestro contenedor de test para el proyecto y actualizando el código de forma automatizada mediante un Workflow. Puede visualizar el workflow creado pulsando [**aquí**](/.github/workflows/latest.yml). Con esto, podemos ejecutar los test y el proyecto de forma independiente de la plataforma desde la que se tenga.
 
 Para visualizar la imagen en DockerHub 🐋 pulsa [aquí](https://hub.docker.com/r/victorrubia/mi_cc_ugr/tags).
 
