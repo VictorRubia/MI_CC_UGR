@@ -1,0 +1,16 @@
+FROM ubuntu:20.04
+
+RUN \
+  apt-get update && apt-get install -y --no-install-recommends --no-install-suggests curl git bzip2 build-essential ca-certificates libssl-dev libreadline-dev zlib1g-dev && \
+  rm -rf /var/lib/apt/lists/* && \
+  curl --proxy-insecure -L https://github.com/rbenv/ruby-build/archive/refs/tags/v20221124.tar.gz | tar -zxvf - -C /tmp/ && \
+  cd /tmp/ruby-build-* && ./install.sh && cd / && \
+  ruby-build -v 3.1.3 /usr/local && rm -rfv /tmp/ruby-build-* && \
+  gem install rails bundler
+WORKDIR /CC
+COPY ../../Gemfile /CC/Gemfile
+COPY ../../Gemfile.lock /CC/Gemfile.lock
+COPY ../.. /CC/
+RUN bundle install
+
+CMD ["rake", "test"]
