@@ -1,0 +1,44 @@
+name: Cineopolis
+
+# Actualizar cuando cambie alguno de los siguentes ficheros/directorios
+on:
+  push:
+    paths:
+      - ".github/workflows/latest.yml"
+      - "app/*"
+      - "test/*"
+      - "config/*"
+      - "config/*"
+      - "Makefile"
+      - "docker-compose.yml"
+      - "Dockerfile_Ubuntu"
+
+jobs:
+  push_to_registry:
+    name: Subida de contenedor a Docker Hub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Se hace checkout al repositorio
+        uses: actions/checkout@v3
+
+      - name: Login en DockerHub
+        uses: docker/login-action@v2.1.0
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Se extraen los metadatos (tags y etiquetas) para el contenedor
+        id: meta
+        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
+        with:
+          #Se añade la etiqueta latest (Para evitar que ponga main)
+          tags: latest
+          images: victorrubia/mi_cc_ugr
+
+      - name: Construyendo y subiendo la imagen a DockerHub
+        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
