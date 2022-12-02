@@ -1,0 +1,51 @@
+name: GitHub Container Registry
+#Se activará cuando se modifique alguna de las siguientes ramas
+on:
+  push:
+    paths:
+      - ".github/workflows/latest.yml"
+      - "app/*"
+      - "test/*"
+      - "config/*"
+      - "config/*"
+      - "Makefile"
+      - "docker-compose.yml"
+      - "Dockerfile"
+#Variable de entorno que será nuestro repositorio
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Se hace checkout al repositorio
+        uses: actions/checkout@v3
+
+      - name: Login en GitHub Container registry
+        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Se extraen los metadatos (tags y etiquetas) para el contenedor
+        id: meta
+        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
+        with:
+          #Se añade la etiqueta latest (Para evitar que ponga main)
+          tags: latest
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+
+      - name: Construyendo y subiendo la imagen a GitHub Container Registry
+        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
