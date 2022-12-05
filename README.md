@@ -22,6 +22,12 @@ Repositorio para almacenar las prácticas de CC del curso 22-23 del MUII en la U
 - 📃 [Hito 2] Para leer la documentación sobre **bibliotecas de aserciones** pulse [aquí](/doc/2_test_assertion_library.md).
 - 👨🏽‍💻 [Hito 2] Para conocer **qué se ha desarrollado** en este hito pulse [aquí](/doc/2_que_se_ha_hecho.md)
 
+## Hito 3
+
+- 📃 [Hito 3] Para leer la documentación sobre **justificación de contenedor base** pulse [aquí](/doc/3_justif_contenedor.md).
+- 📃 [Hito 3] Para leer la documentación sobre **contenedores en DockerHub, GitHub Container Registry y otros** pulse [aquí](/doc/3_contenedores.md).
+- 👨🏽‍💻 [Hito 3] Para conocer **qué se ha desarrollado** en este hito pulse [aquí](/doc/3_que_se_ha_hecho.md)
+
 ## Cineópolis
 
 <img src="./doc/img/logo.png" alt="drawing" width="200"/>
@@ -40,4 +46,4 @@ Para conocer las historias de usuario e issues del proyecto pulse [aquí](https:
 
 ### API Endpoints
 
-Para conocer las posibles peticiones que se pueden solicitar a la API desarrollada pulse [aquí](/doc/2_api_endpoints.md)
+Para conocer las posibles peticiones que se pueden solicitar a la API desarrollada pulse [aquí](/doc/2_api_endpoints.md) (Hito 2) [aquí](/doc/3_api_endpoints.md) (Hito 3).
