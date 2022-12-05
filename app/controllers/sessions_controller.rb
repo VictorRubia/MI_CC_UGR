@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   before_action :set_session, only: %i[ show update destroy ]
   before_action :prepare_get_cartelera, only: %i[ get_cartelera ]
+  before_action :authenticate_user!, except: %i[ get_cartelera ]
 
   # GET /sessions.json
   def index
