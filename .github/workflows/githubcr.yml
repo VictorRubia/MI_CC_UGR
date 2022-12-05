@@ -12,7 +12,7 @@ on:
       - "Makefile"
       - "docker-compose.yml"
       - "Dockerfile"
-      - "db/schema.rb"
+      - "db/*"
 # Variable de entorno que será nuestro repositorio
 env:
   REGISTRY: ghcr.io
