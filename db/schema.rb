@@ -10,35 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_05_103000) do
-
+ActiveRecord::Schema[7.0].define(version: 2022_12_05_103000) do
   create_table "billboards", force: :cascade do |t|
     t.integer "session_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["session_id"], name: "index_billboards_on_session_id"
   end
 
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.text "synopsis"
-    t.datetime "launch_date", precision: 6
+    t.datetime "launch_date"
     t.string "age_classification"
     t.string "length"
     t.string "genre"
     t.string "director"
     t.string "poster"
     t.decimal "rating_avg"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sessions", force: :cascade do |t|
     t.integer "movie_id", null: false
     t.text "times", default: "--- []\n"
     t.text "dates", default: "--- []\n"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["movie_id"], name: "index_sessions_on_movie_id"
   end
 
@@ -46,13 +45,13 @@ ActiveRecord::Schema.define(version: 2022_12_05_103000) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
-    t.datetime "reset_password_sent_at", precision: 6
-    t.datetime "remember_created_at", precision: 6
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "sign_in_count", default: 0, null: false
-    t.datetime "current_sign_in_at", precision: 6
-    t.datetime "last_sign_in_at", precision: 6
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
     t.index ["email"], name: "index_users_on_email", unique: true

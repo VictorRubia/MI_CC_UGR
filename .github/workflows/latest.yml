@@ -12,6 +12,7 @@ on:
       - "Makefile"
       - "docker-compose.yml"
       - "Dockerfile"
+      - "db/schema.rb"
 
 jobs:
   push_to_registry:
