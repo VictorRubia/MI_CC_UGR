@@ -2,7 +2,7 @@
 
 ## 🎞️ Definición del modelo de sesiones de películas
 
-El modelo de películas debe contener la siguiente información:
+El modelo de sesiones de películas debe contener la siguiente información:
 
 - **ID**: identificador único de sesión. Permite identificar unívocamente las sesiones de películas.
 - **Película**: Referencia a la película que se va a proyectar la película.
