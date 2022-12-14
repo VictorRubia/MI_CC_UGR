@@ -8,7 +8,7 @@ Para realizar integración continua vamos a valorar cuatro entornos distintos:
 - Workflows de GitHub Actions: Herramienta proporcionada por GitHub, se conecta automáticamente con el repositorio y se ejecuta de forma asíncrona cada vez que modificamos el proyecto de nuestro repositorio.
 - Circle CI: Una herramienta gratuita en la que podemos ejecutar el contenedor de pruebas.
 
-Su justificación y correcto funcionamiento puede leerse [aquí](/doc/hito4/4_integracion_continua.md).
+Su justificación y correcto funcionamiento puede leerse [aquí](/doc/4_integracion_continua.md).
 
 ## Desarrollo: Autorelleno de información de películas
 
