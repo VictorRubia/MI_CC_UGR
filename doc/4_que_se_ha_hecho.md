@@ -8,6 +8,8 @@ Para realizar integración continua vamos a valorar cuatro entornos distintos:
 - Workflows de GitHub Actions: Herramienta proporcionada por GitHub, se conecta automáticamente con el repositorio y se ejecuta de forma asíncrona cada vez que modificamos el proyecto de nuestro repositorio.
 - Circle CI: Una herramienta gratuita en la que podemos ejecutar el contenedor de pruebas.
 
+Su justificación y correcto funcionamiento puede leerse [aquí](/doc/hito4/4_integracion_continua.md).
+
 ## Desarrollo: Autorelleno de información de películas
 
 Para cumplir con las tareas de desarrollo marcadas en el hito 4 de nuestro proyecto, se ha añadido la funcionalidad para que teniendo acceso a una base de datos de películas, ya sea local o a través de una API externa (en nuestro caso se hará mediante una base de datos local), se pueda optar a la hora de añadir una nueva película dando tan solo el nombre de la misma y dejando que el sistema rellene toda la demás información, como sipnosis, categoría, duración, imagen del póster, entre otros.
