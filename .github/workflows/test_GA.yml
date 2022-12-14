@@ -1,0 +1,23 @@
+name: Tests
+
+on:
+  push:
+    paths:
+      - ".github/workflows/test_GA.yml"
+      - "app/*"
+      - "test/*"
+      - "config/*"
+      - "config/*"
+      - "Makefile"
+      - "docker-compose.yml"
+      - "Dockerfile"
+      - "db/*"
+
+jobs:
+  lanzar_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Lanzar Tests
+        run:
+          docker run -t victorrubia/mi_cc_ugr
