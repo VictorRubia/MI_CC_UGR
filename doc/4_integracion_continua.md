@@ -27,7 +27,7 @@ Puede visualizar la ejecución de los tests automatizados en el siguiente [enlac
 
 ### [Circle CI](https://circleci.com/)
 
-Es una herramienta bastante similar a los Workflows de GitHub Actions. No se requiere de ninguna tarjeta y se ofrece un plan gratuito mediante créditos mensuales, lo cual restringe bastante el número de peticiones que se pueden realizar. Se enlaza con GitHub a través de un fichero de configuración en el repositorio. Este archivo de configuración puede visualizarse en el siguiente [enlace](/.circleci/config.yml).
+Es una herramienta bastante similar a los Workflows de GitHub Actions. No se requiere de ninguna tarjeta y se ofrece un plan gratuito mediante créditos mensuales, lo cual restringe bastante el número de peticiones que se pueden realizar. Se enlaza con GitHub a través de un fichero de configuración en el repositorio. Este archivo de configuración puede visualizarse en el siguiente [enlace](/.circleci/config.yml). Para que la herramienta funcione correctamente, es necesario crear un fichero llamado `config.yml` en la carpeta `.circleci` del repositorio. Además, cada vez que realicemos un commit en el repositorio, lanzará los tests, consumiendo créditos. Para evitar esto, debemos indicar en el mensaje del commit `[skip ci]` para que no se ejecute la acción.
 
 Resultado de ejecución de los tests:
 
