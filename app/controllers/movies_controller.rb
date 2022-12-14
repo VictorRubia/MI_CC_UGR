@@ -13,7 +13,19 @@ class MoviesController < ApplicationController
 
   # POST /movies or /movies.json
   def create
-    @movie = Movie.new(movie_params)
+
+    if !movie_params[:synopsis].present? && !movie_params[:launch_date].present? &&
+        !movie_params[:length].present? && !movie_params[:genre].present? &&
+        !movie_params[:director].present? && !movie_params[:poster].present? &&
+        !movie_params[:rating_avg].present?
+      @movies_db = JSON.parse(File.read('app/assets/json/movieDB.json'))
+      @movie_json = @movies_db.select {|movie| movie["title"] == movie_params[:title]}
+      @params = movie_params.merge(synopsis: @movie_json[0]['synopsis'], launch_date: @movie_json[0]['launch_date'],
+                         length: @movie_json[0]['length'], genre: @movie_json[0]['genre'], director: @movie_json[0]['director'], poster: @movie_json[0]['poster'])
+      @movie = Movie.new(@params)
+    else
+      @movie = Movie.new(movie_params)
+    end
 
     if @movie.save
       render json: @movie, status: :created, location: @movie
@@ -33,7 +45,7 @@ class MoviesController < ApplicationController
 
   # DELETE /sessions/1.json
   def destroy
-    Session.find_by(movie_id: @movie.id).destroy
+    Session.find_by(movie_id: @movie.id).destroy if Session.find_by(movie_id: @movie.id).present?
     @movie.destroy
   end
 
