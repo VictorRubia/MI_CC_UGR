@@ -28,6 +28,11 @@ Repositorio para almacenar las prácticas de CC del curso 22-23 del MUII en la U
 - 📃 [Hito 3] Para leer la documentación sobre **contenedores en DockerHub, GitHub Container Registry y otros** pulse [aquí](/doc/3_contenedores.md).
 - 👨🏽‍💻 [Hito 3] Para conocer **qué se ha desarrollado** en este hito pulse [aquí](/doc/3_que_se_ha_hecho.md)
 
+## Hito 4
+
+- 📃 [Hito 4] Para leer la documentación sobre **Integración Continua con su justificación y funcionando** pulse [aquí](/doc/4_integracion_continua.md).
+- 👨🏽‍💻 [Hito 4] Para conocer **qué se ha desarrollado** en este hito pulse [aquí](/doc/4_que_se_ha_hecho.md)
+
 ## Cineópolis
 
 <img src="./doc/img/logo.png" alt="drawing" width="200"/>
