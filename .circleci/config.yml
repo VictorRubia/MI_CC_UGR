@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: victorrubia/mi_cc_ugr:latest
+    steps:
+      - checkout
+      - run: rake test
+
+workflows:
+  test_project:
+    jobs:
+      - test
