@@ -1,17 +1,17 @@
 name: GitHub Container Registry
 
 # Se activa cuando se modifica alguna de los siguientes ficheros
-on:
-  push:
-    paths:
-      - ".github/workflows/githubcr.yml"
-      - "app/*"
-      - "test/*"
-      - "config/*"
-      - "Makefile"
-      - "docker-compose.yml"
-      - "Dockerfile"
-      - "db/*"
+on: push
+#  push:
+#    paths:
+#      - ".github/workflows/githubcr.yml"
+#      - "app/*"
+#      - "test/*"
+#      - "config/*"
+#      - "Makefile"
+#      - "docker-compose.yml"
+#      - "Dockerfile"
+#      - "db/*"
 # Variable de entorno que será nuestro repositorio
 env:
   REGISTRY: ghcr.io
