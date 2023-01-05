@@ -1,16 +1,16 @@
 name: Tests
 
-on:
-  push:
-    paths:
-      - ".github/workflows/test_GA.yml"
-      - "app/*"
-      - "test/*"
-      - "config/*"
-      - "Makefile"
-      - "docker-compose.yml"
-      - "Dockerfile"
-      - "db/*"
+on: push
+#  push:
+#    paths:
+#      - ".github/workflows/test_GA.yml"
+#      - "app/*"
+#      - "test/*"
+#      - "config/*"
+#      - "Makefile"
+#      - "docker-compose.yml"
+#      - "Dockerfile"
+#      - "db/*"
 
 jobs:
   lanzar_test:

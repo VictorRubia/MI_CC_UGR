@@ -1,18 +1,18 @@
 name: Cineopolis
 
 # Actualizar cuando cambie alguno de los siguentes ficheros/directorios
-on:
-  push:
-    paths:
-      - ".github/workflows/latest.yml"
-      - "app/*"
-      - "test/*"
-      - "config/*"
-      - "Makefile"
-      - "docker-compose.yml"
-      - "Dockerfile"
-      - "db/schema.rb"
-      - "db/*"
+on: push
+#  push:
+#    paths:
+#      - ".github/workflows/latest.yml"
+#      - "app/*"
+#      - "test/*"
+#      - "config/*"
+#      - "Makefile"
+#      - "docker-compose.yml"
+#      - "Dockerfile"
+#      - "db/schema.rb"
+#      - "db/*"
 
 jobs:
   push_to_registry:
