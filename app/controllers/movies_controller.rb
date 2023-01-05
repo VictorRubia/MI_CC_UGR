@@ -45,7 +45,11 @@ class MoviesController < ApplicationController
 
   # DELETE /sessions/1.json
   def destroy
-    Session.find_by(movie_id: @movie.id).destroy if Session.find_by(movie_id: @movie.id).present?
+    if Session.find_by(movie_id: @movie.id).present?
+      @session = Session.find_by(movie_id: @movie.id)
+      Purchase.find_by(session_id: @session.id).destroy if Purchase.find_by(session_id: @session.id).present?
+      @session.destroy
+    end
     @movie.destroy
   end
 
