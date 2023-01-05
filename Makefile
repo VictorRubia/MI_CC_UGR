@@ -1,6 +1,8 @@
 .PHONY: up down build test
 up:
 	docker-compose up
+install:
+	docker-compose up
 down:
 	docker-compose down
 build:
