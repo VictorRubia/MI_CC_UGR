@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_05_103000) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_05_140503) do
   create_table "billboards", force: :cascade do |t|
     t.integer "session_id", null: false
     t.datetime "created_at", null: false
@@ -32,12 +32,25 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_05_103000) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "purchases", force: :cascade do |t|
+    t.string "email"
+    t.integer "num_tickets"
+    t.decimal "price"
+    t.datetime "timestamp", precision: nil
+    t.integer "session_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["session_id"], name: "index_purchases_on_session_id"
+  end
+
   create_table "sessions", force: :cascade do |t|
     t.integer "movie_id", null: false
     t.text "times", default: "--- []\n"
     t.text "dates", default: "--- []\n"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "num_tickets"
+    t.decimal "price"
     t.index ["movie_id"], name: "index_sessions_on_movie_id"
   end
 
@@ -59,5 +72,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_05_103000) do
   end
 
   add_foreign_key "billboards", "sessions"
+  add_foreign_key "purchases", "sessions"
   add_foreign_key "sessions", "movies"
 end
