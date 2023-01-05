@@ -2,7 +2,7 @@ name: GitHub Container Registry
 
 # Se activa cuando se modifica alguna de los siguientes ficheros
 on: push
-#  push:
+#  push:e
 #    paths:
 #      - ".github/workflows/githubcr.yml"
 #      - "app/*"
