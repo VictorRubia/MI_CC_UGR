@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1
+# syntax=docker/dockerfile:11
 FROM ruby:3.1.3-slim
 RUN apt-get update -qq && apt-get install -y build-essential
 RUN apt remove cmdtest -y
