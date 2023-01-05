@@ -4,8 +4,12 @@ one:
   movie: one
   times: 16:00
   dates: 17/07/2022
+  num_tickets: 50
+  price: 8
 
 two:
   movie: two
   times: MyString
   dates: 2022-11-16 15:28:54
+  num_tickets: 25
+  price: 8

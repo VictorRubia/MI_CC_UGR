@@ -47,4 +47,11 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     get "/cartelera", as: :json, headers: { "HTTP_AUTHORIZATION" => "Token token=#{@user}" }
     assert_response :success
   end
+
+  test "buy a ticket for a session" do
+    assert_difference("Purchase.count") do
+      post "/sessions/"+@session.id.to_s+"/comprar", params: { num_tickets: 1, email: "prueba@prueba.com" }, as: :json
+      assert_response :success
+    end
+  end
 end
