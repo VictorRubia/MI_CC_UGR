@@ -30,14 +30,12 @@ gem 'logstash-event'
 gem 'logstash-logger'
 ```
 
-Para configurar dichas gemas añadiremos al `config/initializers` un archivo llamado `lograge.rb` que contenga las siguientes líneas de codigo:
+Para configurar dichas gemas y tener logs en entorno de _development_ y _production_ añadiremos al `config/environments/development.rb` y `config/environments/production.rb` las siguientes líneas de codigo:
 
 ```ruby
-Rails.application.configure do
-  config.lograge.enabled = true
-  config.lograge.formatter = Lograge::Formatters::Logstash.new
-  config.lograge.logger = LogStashLogger.new(type: :udp, host: ENV['LOGSTASH_HOST'], port: 8089)
-end
+config.lograge.enabled = true
+config.lograge.formatter = Lograge::Formatters::Logstash.new
+config.lograge.logger = LogStashLogger.new(type: :udp, host: ENV['LOGSTASH_HOST'], port: 8089)
 ```
 
 ### Docker
@@ -143,6 +141,10 @@ Para comprobar que funciona correctamente lo que se ha implementado, se prueban 
 [200] GET /sessions (SessionsController#index)
 [200] GET /cartelera (SessionsController#get_cartelera)
 ```
+
+Para configurar correctamente Kibana, debemos acceder a la dirección `localhost:5601` y crear un índice de tipo _logstash_:
+
+![configkibana](hito5/configkibana.png)
 
 Si se ha configurado correctamente deberíamos poder visualizarlo en Kibana. Lo comprobamos:
 
