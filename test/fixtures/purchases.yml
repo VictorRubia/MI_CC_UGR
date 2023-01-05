@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  num_tickets: 1
+  price: 9.99
+  timestamp: 2023-01-05 15:05:03
+  session: one
+
+two:
+  email: MyString
+  num_tickets: 1
+  price: 9.99
+  timestamp: 2023-01-05 15:05:03
+  session: two
