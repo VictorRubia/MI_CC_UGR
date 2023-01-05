@@ -1,4 +1,7 @@
 # MI_CC_UGR
+[![Cineopolis](https://github.com/VictorRubia/MI_CC_UGR/actions/workflows/latest.yml/badge.svg)](https://github.com/VictorRubia/MI_CC_UGR/actions/workflows/latest.yml)
+[![GitHub Container Registry](https://github.com/VictorRubia/MI_CC_UGR/actions/workflows/githubcr.yml/badge.svg)](https://github.com/VictorRubia/MI_CC_UGR/actions/workflows/githubcr.yml)
+[![Tests](https://github.com/VictorRubia/MI_CC_UGR/actions/workflows/test_GA.yml/badge.svg)](https://github.com/VictorRubia/MI_CC_UGR/actions/workflows/test_GA.yml)
 
 Repositorio para almacenar las prácticas de CC del curso 22-23 del MUII en la UGR.
 
