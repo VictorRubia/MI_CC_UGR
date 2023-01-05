@@ -17,7 +17,6 @@ class SessionsController < ApplicationController
 
   def comprar_entrada
     # If email and num_tickets are not nil, then create a new purchase and update num_tickets for this session
-    # then render the purchase
     if params[:email] != nil && params[:num_tickets] != nil
       @purchase = Purchase.new(email: params[:email],
                                num_tickets: params[:num_tickets],
