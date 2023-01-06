@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_05_140503) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_06_133858) do
   create_table "billboards", force: :cascade do |t|
     t.integer "session_id", null: false
     t.datetime "created_at", null: false
@@ -28,6 +28,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_05_140503) do
     t.string "director"
     t.string "poster"
     t.decimal "rating_avg"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "newsletters", force: :cascade do |t|
+    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
