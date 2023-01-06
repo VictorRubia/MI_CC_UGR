@@ -1,4 +1,5 @@
-# Run workflow on every push to master branch.
+name: Deploy a Heroku
+
 on:
   push:
     paths:
