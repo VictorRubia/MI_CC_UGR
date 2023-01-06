@@ -5,13 +5,13 @@ on:
   push:
     paths:
       - ".github/workflows/githubcr.yml"
-      - "app/*"
-      - "test/*"
-      - "config/*"
+      - "app/**"
+      - "test/**"
+      - "config/**"
       - "Makefile"
       - "docker-compose.yml"
       - "Dockerfile"
-      - "db/*"
+      - "db/**"
 # Variable de entorno que será nuestro repositorio
 env:
   REGISTRY: ghcr.io
