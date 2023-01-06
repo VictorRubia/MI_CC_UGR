@@ -97,6 +97,8 @@ Finished in 0.156963s, 159.2732 runs/s, 229.3534 assertions/s.
 
 ## 5º. Despliegue en Heroku
 
+[![Deploy a Heroku](https://github.com/VictorRubia/MI_CC_UGR/actions/workflows/heroku.yml/badge.svg)](https://github.com/VictorRubia/MI_CC_UGR/actions/workflows/heroku.yml)
+
 Para concluir con el desarrollo, se desplegará el proyecto en Heroku. Para ello, se ha creado una nueva aplicación en Heroku, llamada cineopolis. Tras esto, configuramos un Action de GitHub para que cada vez que se haga un push, que modifique la lógica de la aplicación, en la rama master, se despliegue en Heroku.
 
 Se puede ver el despliegue en Heroku pulsando [aquí](https://cineopolis.herokuapp.com/).
