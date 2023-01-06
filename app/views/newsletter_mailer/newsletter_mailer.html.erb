@@ -1,0 +1,50 @@
+<style>
+    table, th, td {
+        border: 1px solid;
+    }
+</style>
+
+<h1>Cartelera semanal en Cineópolis</h1>
+
+<p>Querido cinéfilo, estas son las películas que se proyectan esta semana en Cineópolis:</p>
+
+<br/>
+
+<% @movies.each do |movie| %>
+
+  <!-- Generate a table to display movie info with session details, movies must include title, synopsis, launch_date, age_classification, length, genre, director, poster and rating average -->
+  <table>
+    <tr>
+      <td><img src="<%= movie.poster %>"></td>
+      <td>
+        <h2>Título: <%= movie.title %></h2>
+        <p>Sinopsis: <%= movie.synopsis %></p>
+        <p>Fecha de estreno: <%= movie.launch_date.strftime('%d/%m/%Y') %></p>
+        <p>Clasificación de edad: <%= movie.age_classification %></p>
+        <p>Duración (min): <%= movie.length %></p>
+        <p>Género: <%= movie.genre %></p>
+        <p>Director: <%= movie.director %></p>
+        <p>Puntuación Media (IMDB): <%= movie.rating_avg %></p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <table style="margin: 0 auto;">
+          <tr>
+            <td><strong>Fecha</strong></td>
+            <td><strong>Hora</strong></td>
+          </tr>
+          <% @sessions.where(movie_id: movie.id).group_by(&:dates).each do |date, session| %>
+            <tr>
+              <td><%= date %></td>
+            <% session.each do |times| %>
+                <td><%= times.times %></td>
+            <% end %>
+              </tr>
+          <% end %>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+<% end %>
