@@ -4,6 +4,7 @@ services:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     restart: always
+    container_name: cineopolis-api
     environment:
       - LOGSTASH_HOST=logstash
     volumes:
@@ -12,6 +13,15 @@ services:
       - "3000:3000"
     networks:
       - elknetwork
+
+  db:
+    platform: linux/amd64
+    image: nouchka/sqlite3:latest
+    container_name: sqlite3
+    volumes:
+      - ./db:/root/db
+    stdin_open: true
+    tty: true
 
   elasticsearch:
     image: elasticsearch:7.17.8
