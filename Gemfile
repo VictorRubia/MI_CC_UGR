@@ -70,3 +70,5 @@ gem 'underscore_params'
 gem "lograge"
 gem "logstash-event"
 gem "logstash-logger"
+gem "letter_opener", :group => :development
+gem "whenever", :require => false

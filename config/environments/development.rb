@@ -58,6 +58,7 @@ Rails.application.configure do
   config.lograge.formatter = Lograge::Formatters::Logstash.new
   config.lograge.logger = LogStashLogger.new(type: :udp, host: ENV['LOGSTASH_HOST'], port: 8089)
 
+  config.action_mailer.delivery_method = :letter_opener
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
