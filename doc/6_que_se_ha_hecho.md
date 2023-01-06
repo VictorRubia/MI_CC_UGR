@@ -78,6 +78,23 @@ end
 
 Donde cada lunes a las 9, se ejecutará la tarea de envío de cartelera semanal.
 
+## 5º. Testeo de la funcionalidad desarrollada
+
+Se han creado nuevos tests para la funcionalidad desarrollada, los cuales prueban que el envío de correos se realiza correctamente y que el modelo que registra a los usuarios en el envío de la cartelera semanal funciona correctamente:
+
+```
+$ make test
+Running 25 tests in a single process (parallelization threshold is 50)
+Run options: --seed 41413
+
+# Running:
+
+.........................
+
+Finished in 0.156963s, 159.2732 runs/s, 229.3534 assertions/s.
+25 runs, 36 assertions, 0 failures, 0 errors, 0 skips
+```
+
 ## 5º. Despliegue en Heroku
 
 Para concluir con el desarrollo, se desplegará el proyecto en Heroku. Para ello, se ha creado una nueva aplicación en Heroku, llamada cineopolis. Tras esto, configuramos un Action de GitHub para que cada vez que se haga un push, que modifique la lógica de la aplicación, en la rama master, se despliegue en Heroku.

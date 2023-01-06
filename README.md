@@ -5,6 +5,14 @@
 
 Repositorio para almacenar las prácticas de CC del curso 22-23 del MUII en la UGR.
 
+## Hito 6
+
+- 📌 [Hito 6] Para leer la documentación sobre **la estructura del clúster** pulse [aquí](/doc/6_justificacion_estructura.md).
+- 📌 [Hito 6] Para leer la documentación sobre **la configuración de los contenedores del clúster** pulse [aquí](/doc/6_justif_configuracion.md).
+- 📌 [Hito 6] Para leer la documentación sobre **el fichero de composición** pulse [aquí](/doc/6_justif_composicion.md).
+- 👨🏽‍💻 [Hito 6] Para leer la documentación sobre **qué se ha desarrollado, testeado y desplegado** en este hito pulse [aquí](/doc/6_que_se_ha_hecho.md).
+
+
 ## Hito 5
 
 - 📃 [Hito 5] Para leer la documentación sobre **Diseño y test de un microservicio** y conocer **qué se ha desarrollado** en este hito pulse [aquí](/doc/5_que_se_ha_hecho.md).
@@ -62,3 +70,4 @@ Para conocer las posibles peticiones que se pueden solicitar a la API desarrolla
 - [Hito 2](/doc/2_api_endpoints.md)
 - [Hito 3](/doc/3_api_endpoints.md)
 - [Hito 5](/doc/5_api_endpoints.md)
+- [Hito 6](/doc/6_api_endpoints.md)
